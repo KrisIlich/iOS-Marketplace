@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99BE82C12C36EAFC0091EBDD /* heirloomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE82C02C36EAFC0091EBDD /* heirloomApp.swift */; };
+		99BE82C32C36EAFC0091EBDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE82C22C36EAFC0091EBDD /* ContentView.swift */; };
+		99BE82C52C36EAFC0091EBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99BE82C42C36EAFC0091EBDD /* Assets.xcassets */; };
+		99BE82C82C36EAFC0091EBDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99BE82C72C36EAFC0091EBDD /* Preview Assets.xcassets */; };
+		99BE82D22C36EAFD0091EBDD /* heirloomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE82D12C36EAFD0091EBDD /* heirloomTests.swift */; };
+		99BE82DC2C36EAFD0091EBDD /* heirloomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE82DB2C36EAFD0091EBDD /* heirloomUITests.swift */; };
+		99BE82DE2C36EAFD0091EBDD /* heirloomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE82DD2C36EAFD0091EBDD /* heirloomUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99BE82CE2C36EAFD0091EBDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99BE82B52C36EAFC0091EBDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99BE82BC2C36EAFC0091EBDD;
+			remoteInfo = heirloom;
+		};
+		99BE82D82C36EAFD0091EBDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99BE82B52C36EAFC0091EBDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99BE82BC2C36EAFC0091EBDD;
+			remoteInfo = heirloom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99BE82BD2C36EAFC0091EBDD /* heirloom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heirloom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99BE82C02C36EAFC0091EBDD /* heirloomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heirloomApp.swift; sourceTree = "<group>"; };
+		99BE82C22C36EAFC0091EBDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		99BE82C42C36EAFC0091EBDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99BE82C72C36EAFC0091EBDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99BE82CD2C36EAFD0091EBDD /* heirloomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heirloomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99BE82D12C36EAFD0091EBDD /* heirloomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heirloomTests.swift; sourceTree = "<group>"; };
+		99BE82D72C36EAFD0091EBDD /* heirloomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heirloomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99BE82DB2C36EAFD0091EBDD /* heirloomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heirloomUITests.swift; sourceTree = "<group>"; };
+		99BE82DD2C36EAFD0091EBDD /* heirloomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heirloomUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99BE82BA2C36EAFC0091EBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99BE82CA2C36EAFD0091EBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99BE82D42C36EAFD0091EBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99BE82B42C36EAFC0091EBDD = {
+			isa = PBXGroup;
+			children = (
+				99BE82BF2C36EAFC0091EBDD /* heirloom */,
+				99BE82D02C36EAFD0091EBDD /* heirloomTests */,
+				99BE82DA2C36EAFD0091EBDD /* heirloomUITests */,
+				99BE82BE2C36EAFC0091EBDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99BE82BE2C36EAFC0091EBDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99BE82BD2C36EAFC0091EBDD /* heirloom.app */,
+				99BE82CD2C36EAFD0091EBDD /* heirloomTests.xctest */,
+				99BE82D72C36EAFD0091EBDD /* heirloomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99BE82BF2C36EAFC0091EBDD /* heirloom */ = {
+			isa = PBXGroup;
+			children = (
+				99BE82C02C36EAFC0091EBDD /* heirloomApp.swift */,
+				99BE82C22C36EAFC0091EBDD /* ContentView.swift */,
+				99BE82C42C36EAFC0091EBDD /* Assets.xcassets */,
+				99BE82C62C36EAFC0091EBDD /* Preview Content */,
+			);
+			path = heirloom;
+			sourceTree = "<group>";
+		};
+		99BE82C62C36EAFC0091EBDD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				99BE82C72C36EAFC0091EBDD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99BE82D02C36EAFD0091EBDD /* heirloomTests */ = {
+			isa = PBXGroup;
+			children = (
+				99BE82D12C36EAFD0091EBDD /* heirloomTests.swift */,
+			);
+			path = heirloomTests;
+			sourceTree = "<group>";
+		};
+		99BE82DA2C36EAFD0091EBDD /* heirloomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99BE82DB2C36EAFD0091EBDD /* heirloomUITests.swift */,
+				99BE82DD2C36EAFD0091EBDD /* heirloomUITestsLaunchTests.swift */,
+			);
+			path = heirloomUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99BE82BC2C36EAFC0091EBDD /* heirloom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99BE82E12C36EAFD0091EBDD /* Build configuration list for PBXNativeTarget "heirloom" */;
+			buildPhases = (
+				99BE82B92C36EAFC0091EBDD /* Sources */,
+				99BE82BA2C36EAFC0091EBDD /* Frameworks */,
+				99BE82BB2C36EAFC0091EBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = heirloom;
+			productName = heirloom;
+			productReference = 99BE82BD2C36EAFC0091EBDD /* heirloom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99BE82CC2C36EAFD0091EBDD /* heirloomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99BE82E42C36EAFD0091EBDD /* Build configuration list for PBXNativeTarget "heirloomTests" */;
+			buildPhases = (
+				99BE82C92C36EAFD0091EBDD /* Sources */,
+				99BE82CA2C36EAFD0091EBDD /* Frameworks */,
+				99BE82CB2C36EAFD0091EBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99BE82CF2C36EAFD0091EBDD /* PBXTargetDependency */,
+			);
+			name = heirloomTests;
+			productName = heirloomTests;
+			productReference = 99BE82CD2C36EAFD0091EBDD /* heirloomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99BE82D62C36EAFD0091EBDD /* heirloomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99BE82E72C36EAFD0091EBDD /* Build configuration list for PBXNativeTarget "heirloomUITests" */;
+			buildPhases = (
+				99BE82D32C36EAFD0091EBDD /* Sources */,
+				99BE82D42C36EAFD0091EBDD /* Frameworks */,
+				99BE82D52C36EAFD0091EBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99BE82D92C36EAFD0091EBDD /* PBXTargetDependency */,
+			);
+			name = heirloomUITests;
+			productName = heirloomUITests;
+			productReference = 99BE82D72C36EAFD0091EBDD /* heirloomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99BE82B52C36EAFC0091EBDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					99BE82BC2C36EAFC0091EBDD = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					99BE82CC2C36EAFD0091EBDD = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 99BE82BC2C36EAFC0091EBDD;
+					};
+					99BE82D62C36EAFD0091EBDD = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 99BE82BC2C36EAFC0091EBDD;
+					};
+				};
+			};
+			buildConfigurationList = 99BE82B82C36EAFC0091EBDD /* Build configuration list for PBXProject "heirloom" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99BE82B42C36EAFC0091EBDD;
+			productRefGroup = 99BE82BE2C36EAFC0091EBDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99BE82BC2C36EAFC0091EBDD /* heirloom */,
+				99BE82CC2C36EAFD0091EBDD /* heirloomTests */,
+				99BE82D62C36EAFD0091EBDD /* heirloomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99BE82BB2C36EAFC0091EBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99BE82C82C36EAFC0091EBDD /* Preview Assets.xcassets in Resources */,
+				99BE82C52C36EAFC0091EBDD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99BE82CB2C36EAFD0091EBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99BE82D52C36EAFD0091EBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99BE82B92C36EAFC0091EBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99BE82C32C36EAFC0091EBDD /* ContentView.swift in Sources */,
+				99BE82C12C36EAFC0091EBDD /* heirloomApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99BE82C92C36EAFD0091EBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99BE82D22C36EAFD0091EBDD /* heirloomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99BE82D32C36EAFD0091EBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99BE82DE2C36EAFD0091EBDD /* heirloomUITestsLaunchTests.swift in Sources */,
+				99BE82DC2C36EAFD0091EBDD /* heirloomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99BE82CF2C36EAFD0091EBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99BE82BC2C36EAFC0091EBDD /* heirloom */;
+			targetProxy = 99BE82CE2C36EAFD0091EBDD /* PBXContainerItemProxy */;
+		};
+		99BE82D92C36EAFD0091EBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99BE82BC2C36EAFC0091EBDD /* heirloom */;
+			targetProxy = 99BE82D82C36EAFD0091EBDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		99BE82DF2C36EAFD0091EBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99BE82E02C36EAFD0091EBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99BE82E22C36EAFD0091EBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"heirloom/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grizform.heirloom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99BE82E32C36EAFD0091EBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"heirloom/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grizform.heirloom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99BE82E52C36EAFD0091EBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grizform.heirloomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/heirloom.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/heirloom";
+			};
+			name = Debug;
+		};
+		99BE82E62C36EAFD0091EBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grizform.heirloomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/heirloom.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/heirloom";
+			};
+			name = Release;
+		};
+		99BE82E82C36EAFD0091EBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grizform.heirloomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = heirloom;
+			};
+			name = Debug;
+		};
+		99BE82E92C36EAFD0091EBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grizform.heirloomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = heirloom;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99BE82B82C36EAFC0091EBDD /* Build configuration list for PBXProject "heirloom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99BE82DF2C36EAFD0091EBDD /* Debug */,
+				99BE82E02C36EAFD0091EBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99BE82E12C36EAFD0091EBDD /* Build configuration list for PBXNativeTarget "heirloom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99BE82E22C36EAFD0091EBDD /* Debug */,
+				99BE82E32C36EAFD0091EBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99BE82E42C36EAFD0091EBDD /* Build configuration list for PBXNativeTarget "heirloomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99BE82E52C36EAFD0091EBDD /* Debug */,
+				99BE82E62C36EAFD0091EBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99BE82E72C36EAFD0091EBDD /* Build configuration list for PBXNativeTarget "heirloomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99BE82E82C36EAFD0091EBDD /* Debug */,
+				99BE82E92C36EAFD0091EBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99BE82B52C36EAFC0091EBDD /* Project object */;
+}
