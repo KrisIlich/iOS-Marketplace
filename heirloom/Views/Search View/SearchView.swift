@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchView: View {
     @State private var searchText = ""
     @State private var selectedSearchTab: SearchTab = .recent
+    @State private var showFavoritesCartView = false
     @State private var underlineWidth: CGFloat = 0
     @State private var underlineXOffset: CGFloat = 0
     @Binding var showSearchView: Bool
@@ -21,15 +22,16 @@ struct SearchView: View {
                 CustomSearchBar(searchText: $searchText)
                     .padding(.trailing, 14)
                 Button(action: {
-                    // action
+                    showFavoritesCartView.toggle()
                 }) {
                     
-                    Image(systemName: "cart.circle.fill")
+                    Image(systemName: "heart.circle.fill")
                         .resizable()
                         .frame(width: 30, height: 30)
                         .foregroundColor(Color(hex: "#75bba7"))
                 }
             }
+            .frame(height: 35)
             .padding(.horizontal)
             
             HStack {
@@ -43,7 +45,7 @@ struct SearchView: View {
                     .fill(Color.primary)
                     .frame(width: underlineWidth, height: 2)
                     .offset(x: underlineXOffset)
-                    .animation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.2))
+                    .animation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.2), value: underlineXOffset)
             )
             
             if selectedSearchTab == .recent {
@@ -56,6 +58,9 @@ struct SearchView: View {
             
             Spacer()
         }
+       .fullScreenCover(isPresented: $showFavoritesCartView){
+           FavoritesCartView(showCartView: $showFavoritesCartView)
+       }
     }
     
     func tabButton(text: String, tab: SearchTab) -> some View {
@@ -76,7 +81,7 @@ struct SearchView: View {
                             underlineXOffset = proxy.frame(in: .global).midX - proxy.size.width - 4
                         }
                     }
-                    .onChange(of: selectedSearchTab) { _ in
+                    .onChange(of: selectedSearchTab) {
                         if selectedSearchTab == tab {
                             withAnimation {
                                 underlineWidth = 65
@@ -98,5 +103,7 @@ enum SearchTab {
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView(showSearchView: .constant(false))
+            .environmentObject(FavoritesCartViewModel())
+            .environmentObject(ItemViewModel(itemId: UUID()))
     }
 }

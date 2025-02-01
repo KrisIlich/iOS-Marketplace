@@ -44,9 +44,11 @@ struct ImageCarouselView: View {
                     .padding()
                     .background(Color.gray.opacity(0.4))
                     .clipShape(Circle())
-                    .padding(.horizontal)
+                    .padding(.horizontal, 25)
+                    .padding(.bottom, 16)
             }
         }
+            
 
 
     ScrollView(.horizontal, showsIndicators: false) {

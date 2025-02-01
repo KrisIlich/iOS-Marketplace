@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CartItemView: View {
-    var cartItem: CartItem
-    @ObservedObject var viewModel: CartViewModel
+    var cartItem: FavoritesCartItem
+    @ObservedObject var viewModel: FavoritesCartViewModel
     @State private var showRemoveAlert = false
     
     var body: some View {
@@ -45,6 +45,7 @@ struct CartItemView: View {
                     
                 }
             }
+            
             .padding(.horizontal)
             
             HStack(alignment: .lastTextBaseline) {

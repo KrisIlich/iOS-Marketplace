@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SellingTabView: View {
+    
     @AppStorage("selectedTab") private var selectedTab: TabName = .selling
-    @State private var showCartView = false
+    @State private var showFavoritesCartView = false
+    @State private var showSellingItemView = false
     
     var body: some View {
             VStack(alignment: .leading,
@@ -40,21 +42,23 @@ struct SellingTabView: View {
                     }
                     Button(action: {
                         withAnimation {
-                            showCartView.toggle()
+                            showFavoritesCartView.toggle()
                         }
                     }) {
-                        Image(systemName: "cart.circle.fill")
+                        Image(systemName: "heart.circle.fill")
                             .resizable()
                             .foregroundColor(Color(hex:"#75bba7"))
                             .frame(width: 30, height: 30)
                             .cornerRadius(11)
                     }
                 }
-                .fullScreenCover(isPresented: $showCartView){
-                    CartView(viewModel: CartViewModel(cart: MockData.sampleCart), showCartView: $showCartView)
+                .frame(height: 35)
+                .fullScreenCover(isPresented: $showFavoritesCartView){
+                    FavoritesCartView(showCartView: $showFavoritesCartView)
+                        .environmentObject(FavoritesCartViewModel())
                 }
                 .padding(.horizontal)
-                .padding(.bottom, 	20)
+                .padding(.bottom, 	10)
                 
                 
                 ScrollView {
@@ -69,14 +73,34 @@ struct SellingTabView: View {
                                 .foregroundColor(.red)
                         }
                         
-                        VStack {
+                        
+                        VStack(alignment: .leading) {
+                            
+                            Text("90 Day Total")
+                                .font(.system(size: 26, weight: .bold))
+                                .foregroundColor(Color(hex: "56666B"))
+                            
+                            Text("{$90 Day Total Here}")
+                                .font(.subheadline)
+                                .padding(.bottom, 16)
+                            
+                            Button(action: {
+                                showSellingItemView.toggle()
+                            }) {
+                                Text("List an Item")
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .font(.system(size: 18, weight: .bold))
+                                    .background(Color.blue)
+                                    .foregroundColor(Color.white)
+                                    .cornerRadius(10)
+                                    .padding(.bottom, 30)
+                            }
+                                    
+                            
                             Text("Learn the Basics")
                                 .font(.system(size: 26, weight: .bold))
                                 .foregroundColor(Color(hex: "56666B"))
-                        } 
-                        .padding(.horizontal)
-                        
-                        VStack(alignment: .leading) {
                             
                             HStack {
                                 
@@ -124,7 +148,7 @@ struct SellingTabView: View {
                                         .font(.system(size: 12, weight: .regular))
                                         .foregroundColor(Color(hex:"56666B"))
                                 }
-                            } .padding(.bottom, 25)
+                            }
                             
                             HStack {
                                 
@@ -147,13 +171,16 @@ struct SellingTabView: View {
                                         .font(.system(size: 12, weight: .regular))
                                         .foregroundColor(Color(hex:"56666B"))
                                 }
-                            } .padding(.bottom, 25)
+                            } .padding(.bottom, 45)
                         }
                         .padding(.horizontal)
                     }
                 }
                 .padding(.top, 0)
             }
+           .fullScreenCover(isPresented: $showSellingItemView){
+               SellingItemView(showSellingItemView: $showSellingItemView)
+           }
         }
     }
 
@@ -161,5 +188,7 @@ struct SellingTabView: View {
     struct SellingTabView_Previews: PreviewProvider {
         static var previews: some View {
             SellingTabView()
+                .environmentObject(FavoritesCartViewModel())
+                .environmentObject(ItemViewModel(itemId: UUID()))
         }
     }

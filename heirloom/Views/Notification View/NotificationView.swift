@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct NotificationView: View {
-    
+
     @AppStorage("selectedTab") var selectedTab: TabName = .notifications
-    
     @State private var selectedNotification: NotificationItem?
-    @State private var showCartView = false
-    
-    @EnvironmentObject var cartViewModel: CartViewModel
-    
+    @State private var showFavoritesCartView = false
+
     var body: some View {
         ZStack {
             VStack(alignment: .leading,
@@ -40,15 +37,16 @@ struct NotificationView: View {
                     }
                     
                     Button(action: {
-                        showCartView.toggle()
+                        showFavoritesCartView.toggle()
                     }) {
-                        Image(systemName: "cart.circle.fill")
+                        Image(systemName: "heart.circle.fill")
                             .resizable()
                             .frame(width: 30, height: 30)
                             .foregroundColor(Color(hex: "#75bba7"))
                     }
                     
                 }
+                .frame(height: 35)
                 .padding(.horizontal)
                 .padding(.bottom)
                 
@@ -76,8 +74,8 @@ struct NotificationView: View {
                     .presentationDetents([.fraction(0.40)])
                     .presentationDragIndicator(.visible)
         }
-        .fullScreenCover(isPresented: $showCartView){
-            CartView(viewModel: CartViewModel(), showCartView: $showCartView)
+        .fullScreenCover(isPresented: $showFavoritesCartView){
+            FavoritesCartView(showCartView: $showFavoritesCartView)
         }
         
     }
@@ -258,4 +256,6 @@ struct NotificationRowView: View {
 
 #Preview {
     NotificationView()
+        .environmentObject(FavoritesCartViewModel())
+        .environmentObject(ItemViewModel(itemId: UUID()))
 }

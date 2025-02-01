@@ -1,18 +1,62 @@
-//
-//  ShoppingList.swift
-//  heirloom
-//
-//  Created by Kristopher on 9/26/24.
-//
-
 import SwiftUI
 
 struct ShoppingList: View {
+    @StateObject private var viewModel = ShoppingListViewModel()
+    @EnvironmentObject var favoritesCartViewModel: FavoritesCartViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if let error = viewModel.error {
+                Text("Error: \(error.message)")
+            } else {
+                ScrollView {
+                        LazyVStack(spacing: -20) {
+                            
+                            
+                            ForEach(viewModel.items) { item in
+                                NavigationLink(destination: ItemView(viewModel: ItemViewModel(itemId: item.id))) {
+                                    ItemRowView(item: item)
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                            }
+                        }
+                    }
+            }
+        }
+        .onAppear {
+            viewModel.fetchItems()
+        }
     }
 }
 
 #Preview {
-    ShoppingList()
+    NavigationView {
+        ShoppingList()
+            .environmentObject(FavoritesCartViewModel())
+            .environmentObject(FavoritesCartViewModel())
+    }
 }
+
+/*  RecommendedSellerList(sellers: [
+ User(name: "Seller 1"),
+ User(name: "Seller 2"),
+ User(name: "Seller 3"),
+ User(name: "Seller 4"),
+ User(name: "Seller 5")
+])
+CategoriesList(categories: [
+ Category(name: "Antiques", iconName: ""),
+ Category(name: "Modern", iconName: ""),
+ Category(name: "For Stylists", iconName: ""),
+ Category(name: "Art Deco", iconName: ""),
+ Category(name: "Mid Century", iconName: ""),
+ Category(name: "Minimalism", iconName: "")
+])
+RecommendedSellerList(sellers: [
+ User(name: "Seller 1"),
+ User(name: "Seller 2"),
+ User(name: "Seller 3"),
+ User(name: "Seller 4"),
+ User(name: "Seller 5")
+])
+*/

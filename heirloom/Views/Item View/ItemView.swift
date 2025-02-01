@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ItemView: View {
     @StateObject var viewModel: ItemViewModel
-    @State private var scrollOffset: CGFloat = 0
+    
 
     var body: some View {
         if viewModel.isLoading {
@@ -32,7 +32,7 @@ struct ItemView: View {
                             .padding(.horizontal)
                             .padding(.bottom)
 
-                        ActionButtons()
+                        ActionButtons(item: item)
                             .padding(.horizontal)
                             .padding(.bottom, 8)
 
@@ -62,20 +62,18 @@ struct ItemView: View {
                         }
                     }
                 }
-                .navigationBarTitle("Item Details", displayMode: .inline)
+                .navigationBarHidden(true)
                 .alert(item: $viewModel.error) { (error: ViewError) in
                     Alert(title: Text("Error"), message: Text(error.message), dismissButton: .default(Text("OK")))
+                }
             }
-            }
-        } else {
+        } 
+        
+        else {
             Text("Item not found")
-        }
-    }
-}
 
-struct ItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemView(viewModel: ItemViewModel(itemId: MockData.sampleItem.id))
+        }
+        
     }
 }
 

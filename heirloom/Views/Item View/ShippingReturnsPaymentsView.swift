@@ -63,7 +63,7 @@ struct ShippingReturnsPaymentsView: View {
         id: UUID(),
         name: "Sample Item",
         description: "This is a sample item for preview purposes",
-        categoryID: UUID(),
+        categoryId: UUID(),
         price: 99.99,
         currency: "USD",
         imageUrls: [],

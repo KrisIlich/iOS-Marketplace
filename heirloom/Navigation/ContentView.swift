@@ -10,26 +10,35 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: TabName = .home
     
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             
             Group {
                 switch selectedTab {
                 case .home:
-                    HomeScreenView(showHomeScreenView: .constant(false))
+                    HomeScreenView()
                 case .profile:
-                    Image(systemName: "person")
+                    AccountDashboardView()
                 case .search:
-                    Image(systemName: "person")
+                    SearchView(showSearchView: .constant(false))
                 case .notifications:
-                    Image(systemName: "person")
+                    NotificationView()
                 case .selling:
-                    SellingTabView(showSellingTabView: .constant(false))
+                    SellingTabView()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             TabBar()
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(FavoritesCartViewModel())
+            .environmentObject(ItemViewModel(itemId: UUID()))
     }
 }
 

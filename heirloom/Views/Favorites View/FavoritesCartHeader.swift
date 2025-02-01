@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct FavoritesCartHeader: View {
-    @Binding var showCartView: Bool
+    @Binding var showFavoritesCartView: Bool
     
     var body: some View {
         HStack {
 
-            Text("Favorites")
+            Text("Cart")
                 .font(.largeTitle)
                 .foregroundColor(Color(hex: "56666B"))
                 .bold()
@@ -22,7 +22,7 @@ struct FavoritesCartHeader: View {
 
             Button(action: {
                 withAnimation {
-                    showCartView.toggle()
+                    showFavoritesCartView.toggle()
                 }
             }) {
                 Image(systemName: "xmark")
@@ -37,5 +37,5 @@ struct FavoritesCartHeader: View {
 }
 
 #Preview {
-    FavoritesCartHeader(showCartView: .constant(false))
+    FavoritesCartHeader(showFavoritesCartView: .constant(false))
 }

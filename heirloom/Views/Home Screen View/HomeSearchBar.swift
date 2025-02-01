@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct HomeSearchBar: View {
+    @Binding var showSearchView: Bool
+    @AppStorage("selectedTab") var selectedTab: TabName = .home
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            withAnimation {
+                showSearchView.toggle()
+                selectedTab = .search
+            }
+        }) {
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(.ultraThinMaterial)
+                    .frame(height: 40)
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(Color(hex: "#56666B"))
+                        .padding(.leading, 8)
+                    Text("Search for furniture")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                        .padding(10)
+                        .padding(.leading, -6)
+                }
+            }
+            .padding(.horizontal, 5)
+        }
     }
 }
 
 #Preview {
-    HomeSearchBar()
+    HomeSearchBar(showSearchView: .constant(false))
 }

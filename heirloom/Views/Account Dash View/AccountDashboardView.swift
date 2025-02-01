@@ -8,26 +8,29 @@
 import SwiftUI
 
 struct AccountDashboardView: View {
-    
     @AppStorage("selectedTab") var selectedTab: TabName = .profile
+    @State private var showFavoritesCartView = false
     
     var body: some View {
         NavigationView {
             VStack {
                 header
-                    List {
-                        profile
-                        menu
-                    }
-                    .padding(.top, -20)
-                    .listStyle(.insetGrouped)
-                    .navigationBarHidden(true)
+                List {
+                    profile
+                    menu
+                }
+                .padding(.top, -10)
+                .listStyle(.insetGrouped)
+                .navigationBarHidden(true)
             }
             .navigationBarHidden(true)
             .background(Color(UIColor.systemGroupedBackground).edgesIgnoringSafeArea(.all))
         }
+        .fullScreenCover(isPresented: $showFavoritesCartView){
+            FavoritesCartView(showCartView: $showFavoritesCartView)
+        }
     }
-}
+    
     
     
     var header: some View {
@@ -50,15 +53,16 @@ struct AccountDashboardView: View {
             .padding(.trailing, -15)
             
             Button(action: {
-                // Action for cart to be added
+                showFavoritesCartView.toggle()
             }) {
-                Image(systemName: "cart.circle.fill")
+                Image(systemName: "heart.circle.fill")
                     .resizable()
                     .frame(width: 30, height: 30)
                     .foregroundColor(Color(hex: "#75bba7"))
                     .padding(.leading, 16)
             }
         }
+        .frame(height: 35)
         .frame(maxWidth: .infinity)
         .padding(.horizontal)
     }
@@ -72,12 +76,12 @@ struct AccountDashboardView: View {
                 .foregroundStyle(.blue, .blue.opacity(0.3))
                 .padding()
                 .background(Circle().fill(.ultraThinMaterial).opacity(0.5))
-            Text("Account Name")
+            Text("Le Antique")
                 .font(.title.weight(.semibold))
             HStack {
                 Image(systemName: "location")
                     .imageScale(.small)
-                Text("Geo-location")
+                Text("San Diego")
                     .foregroundColor(.secondary)
             }
         }
@@ -114,14 +118,14 @@ struct AccountDashboardView: View {
                 Label("Settings", systemImage: "gear")
             }
         }
-    
+        
         .imageScale(.small)
         .listRowSeparator(.hidden)
         .foregroundColor(Color(hex: "#56666B"))
     }
     
     
-    
+}
     
 
 
@@ -129,5 +133,7 @@ struct AccountDashboardView: View {
 struct AccountDashboardView_Previews: PreviewProvider {
     static var previews: some View {
         AccountDashboardView()
+            .environmentObject(FavoritesCartViewModel())
+            .environmentObject(ItemViewModel(itemId: UUID()))
     }
 }

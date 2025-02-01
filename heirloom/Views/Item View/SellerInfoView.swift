@@ -12,20 +12,36 @@ struct SellerInfoView: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: seller.profileImageURL) { phase in
-                if let image = phase.image {
-                    image.resizable()
-                } else if phase.error != nil {
-                    Image(systemName: "person.crop.circle.fill")
-                        .resizable()
-                        .foregroundColor(.gray)
-                } else {
-                    ProgressView()
+            if let imageUrl = seller.profileImageURL {
+                AsyncImage(url: imageUrl) { phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView()
+                            .frame(width: 50, height: 50)
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle())
+                    case .failure:
+                        Image(systemName: "person.crop.circle.badge.exclamationmark")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(.gray)
+                    @unknown default:
+                        EmptyView()
+                    }
                 }
+            } else {
+                Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.gray)
             }
-            .frame(width: 50, height: 50)
-            .clipShape(Circle())
-            
+    
             VStack(alignment: .leading) {
                 Text(seller.name)
                     .font(.headline)
@@ -41,7 +57,6 @@ struct SellerInfoView: View {
             }
         }
         .padding(.horizontal)
-        .padding(.vertical)
     }
 }
 

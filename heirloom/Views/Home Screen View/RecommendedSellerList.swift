@@ -13,7 +13,7 @@ struct RecommendedSellerList: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Placeholder: Recommended Sellers, Deals, For You, etc ")
+            Text("Popular Sellers in San Diego")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundColor(Color(hex: "B08D57"))
                 .padding()
@@ -57,10 +57,10 @@ struct RecommendedSellerList: View {
 struct RecommendedSellerList_Previews: PreviewProvider {
     static var previews: some View{
         RecommendedSellerList(sellers: [
-            User(name: "Seller 1"),
-            User(name: "Seller 2"),
-            User(name: "Seller 3"),
-            User(name: "Seller 4"),
+            User(name: "Seller 1", feedbackPercentage: 99.3, reviewsCount: 343),
+            User(name: "Seller 2", feedbackPercentage: 83.3, reviewsCount: 234),
+            User(name: "Seller 3", feedbackPercentage: 91.0, reviewsCount: 541),
+            User(name: "Seller 4", feedbackPercentage: 92.4, reviewsCount: 23),
         ])
     }
 }

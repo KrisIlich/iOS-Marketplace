@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol DataServiceProtocol {
+    func fetchItem(by id: UUID, completion: @escaping (Result<Item, Error>) -> Void)
+    func fetchItems(completion: @escaping (Result<[Item], Error>) -> Void)
+    func fetchReviews(for itemId: UUID, completion: @escaping (Result<[Review], Error>) -> Void)
+}

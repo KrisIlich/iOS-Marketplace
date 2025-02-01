@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct FavoritesCartView: View {
-    @EnvironmentObject var viewModel: CartViewModel
+    @EnvironmentObject var viewModel: FavoritesCartViewModel
     @Binding var showCartView: Bool
     
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
-                CartHeader(showCartView: $showCartView)
-                    if viewModel.cart.items.isEmpty {
+                FavoritesCartHeader(showFavoritesCartView: $showCartView)
+                    if viewModel.favoritesCart.items.isEmpty {
                         EmptyFavoritesCart()
                     } else {
                         List {
-                            ForEach(viewModel.cartItemGrouper.groupedCartItems, id: \.seller.id) { group in
+                            ForEach(viewModel.favoritesCartItemGrouper.groupedFavoritesCartItems, id: \.seller.id) { group in
                                 Section(header: SellerInfoView(seller: group.seller)
                                     .listRowInsets(EdgeInsets())
                                     .frame(maxWidth: .infinity)
+                                        
                                 ) {
                                     ForEach(group.items) { cartItem in
                                         CartItemView(cartItem: cartItem, viewModel: viewModel)
@@ -34,9 +35,8 @@ struct FavoritesCartView: View {
                         }
                         .listStyle(PlainListStyle())
                     }
-                if
-                    !viewModel.cartItemGrouper.groupedCartItems.isEmpty {
-                        CartFooter(viewModel: viewModel)
+                if !viewModel.favoritesCartItemGrouper.groupedFavoritesCartItems.isEmpty {
+                        FavoritesCartFooter(viewModel: viewModel)
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
@@ -47,7 +47,7 @@ struct FavoritesCartView: View {
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesCartView(showCartView: .constant(false))
-            .environmentObject(CartViewModel())
+            .environmentObject(FavoritesCartViewModel())
             .environmentObject(ItemViewModel(itemId: UUID()))
     }
 }

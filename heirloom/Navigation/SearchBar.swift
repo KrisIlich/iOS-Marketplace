@@ -5,14 +5,34 @@
 //  Created by Kristopher on 8/20/24.
 //
 
-import SwiftUI
-
-struct SearchBar: View {
+import SwiftUI 
+struct CustomSearchBar: View {
+    @Binding var searchText: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(.ultraThinMaterial) // Eggshell fill color
+                  .frame(height: 40)
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(Color(hex: "#56666B"))
+                    .padding(.leading, 8)
+                
+                TextField("Search for furniture", text: $searchText)
+                
+                    .padding(10)
+                    .padding(.leading, -6)
+            
+        
+            }
+            .padding(.horizontal, 5)
+        }
     }
 }
 
-#Preview {
-    SearchBar()
+
+struct CustomSearchBar_Previews:PreviewProvider {
+    static var previews: some View {
+        CustomSearchBar(searchText: .constant(""))
+    }
 }

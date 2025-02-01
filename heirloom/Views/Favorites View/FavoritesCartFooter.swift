@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FavoritesCartFooter: View {
-    @ObservedObject var viewModel: CartViewModel
+    @ObservedObject var viewModel: FavoritesCartViewModel
     
     var body: some View {
         VStack(spacing: 16) {
@@ -46,6 +46,6 @@ struct FavoritesCartFooter: View {
 
 struct CartFooter_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesCartFooter(viewModel: CartViewModel())
+        FavoritesCartFooter(viewModel: FavoritesCartViewModel())
     }
 }

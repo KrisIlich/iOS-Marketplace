@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct heirloomApp: App {
+    @State private var isVideoFinished = false
+    @StateObject private var cartViewModel = FavoritesCartViewModel()
+    @StateObject private var itemViewModel = ItemViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isVideoFinished {
+                ContentView()
+                    .environmentObject(cartViewModel)
+                    .environmentObject(itemViewModel)
+            } else {
+                LoadScreenView(isVideoFinished: $isVideoFinished)
+                    .ignoresSafeArea()
+                    .environmentObject(cartViewModel)
+                    .environmentObject(itemViewModel)
+            }
         }
     }
 }

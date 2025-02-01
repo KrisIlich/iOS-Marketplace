@@ -9,26 +9,26 @@ import Foundation
 import Combine
 
 class FavoritesItemGrouper: ObservableObject {
-    @Published var groupedCartItems: [(seller: User, items: [CartItem])] = []
+    @Published var groupedFavoritesCartItems: [(seller: User, items: [FavoritesCartItem])] = []
     
-    var groupedCartItemsPublisher: Published<[(seller: User, items: [CartItem])]>.Publisher {
-        $groupedCartItems
+    var groupedCartItemsPublisher: Published<[(seller: User, items: [FavoritesCartItem])]>.Publisher {
+        $groupedFavoritesCartItems
     }
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(cartItems: [CartItem] = []) {
-        self.groupedCartItems = FavoritesItemGrouper.groupAndSort(cartItems: cartItems)
+    init(favoritesCartItems: [FavoritesCartItem] = []) {
+        self.groupedFavoritesCartItems = FavoritesItemGrouper.groupAndSort(favoritesCartItems: favoritesCartItems)
     }
     
-    func update(cartItems: [CartItem]) {
-            self.groupedCartItems = FavoritesItemGrouper.groupAndSort(cartItems: cartItems)
-            print("Updated groupedCartItems. Count: \(self.groupedCartItems.count)")
+    func update(favoritesCartItems: [FavoritesCartItem]) {
+            self.groupedFavoritesCartItems = FavoritesItemGrouper.groupAndSort(favoritesCartItems: favoritesCartItems)
+            print("Updated groupedCartItems. Count: \(self.groupedFavoritesCartItems.count)")
     }
     
-    private static func groupAndSort(cartItems: [CartItem]) -> [(seller: User, items: [CartItem])] {
+    private static func groupAndSort(favoritesCartItems: [FavoritesCartItem]) -> [(seller: User, items: [FavoritesCartItem])] {
         
-        let groupedDictionary = Dictionary(grouping: cartItems, by: { $0.item.seller })
+        let groupedDictionary = Dictionary(grouping: favoritesCartItems, by: { $0.item.seller })
         
         let groupedArray = groupedDictionary.map { (seller: $0.key, items: $0.value)}
         

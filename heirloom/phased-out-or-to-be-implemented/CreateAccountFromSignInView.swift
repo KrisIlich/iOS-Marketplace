@@ -57,7 +57,7 @@ struct CreateAccountFromSignInView: View {
 
                 Spacer()
                 VStack {
-                    NavigationLink(destination: CustomAccountSetupView(showHomeScreenView: $showHomeScreenView, showSignInView: $showSignInView, showCreateAccountView: $showCreateAccountView)) {
+                    NavigationLink(destination: CustomAccountSetupView(showHomeScreenView: $showHomeScreenView, showSignInView: $showSignInView, showCreateAccountView: $sh	owCreateAccountView)) {
                         Text("Use Email or Username")
                             .font(.headline)
                             .foregroundColor(.white)

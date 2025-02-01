@@ -12,7 +12,7 @@ struct TabBar: View {
         }
         
         .padding(.top, 12)
-        .frame(height: 88, alignment: .top)
+        .frame(height: 74, alignment: .top)
         .background(.ultraThinMaterial)
         .background(
             background
@@ -31,7 +31,7 @@ struct TabBar: View {
             if selectedTab == .selling {
                 Spacer()
             }
-            if selectedTab == .search {   }
+            if selectedTab == .search {}
             if selectedTab == .profile {
                 Spacer()
             }
@@ -42,9 +42,10 @@ struct TabBar: View {
             }
             Rectangle()
                 .fill(color)
-                .frame(width: tabItemWidth, height: 2)
+                .frame(width: tabItemWidth, height: 1)
                 .frame(width: tabItemWidth)
                 .frame(maxHeight: .infinity, alignment: .top)
+                .offset(y: 0.5)
             if selectedTab == .home {
                 Spacer()
             }
@@ -131,8 +132,10 @@ struct TabBar: View {
 }
 
 
-struct tabBar_Previews: PreviewProvider {
+struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         TabBar()
+            .environmentObject(FavoritesCartViewModel())
+            .environmentObject(ItemViewModel(itemId: UUID()))
     }
 }
